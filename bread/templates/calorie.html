@@ -1,0 +1,562 @@
+		<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BreadToShred</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Global Food Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<link rel="stylesheet" href="{% static 'css/owl.carousel.css" type="text/css" media="all">
+<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- //font -->
+<style type="text/css">
+	.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+</style>
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function() { 
+	$("#owl-demo").owlCarousel({
+ 
+		autoPlay: 3000, //Set AutoPlay to 3 seconds
+		autoPlay:true,
+		items : 3,
+		itemsDesktop : [640,5],
+		itemsDesktopSmall : [414,4]
+ 
+	});
+	
+}); 
+</script>
+<style type="text/css">
+	table {
+    border-collapse: collapse;
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+</style>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="header">
+			<div class="container">
+				<div class="header-left">
+					<div class="w3layouts-logo">
+						<h1>
+							<a href="index.html">Bread To Shred</a>
+						</h1>
+					</div>
+				</div>
+				<div class="header-right">
+					<a href="/logout/"><p><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</p></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="top-nav">
+						<nav class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="/home/">Home</a></li>
+									<li><a href="/about/">About</a></li>
+									<li><a href="/gallery/">Gallery</a></li>
+									<li><a class="active list-border" href="/calorie/">Calorie Counter</a></li>
+									<li><a href="/blog/">Blog</a></li>
+								</ul>	
+								<div class="clearfix"></div>
+							</div>	
+						</nav>		
+				</div>
+				<!-- w3-banner -->
+				<div class="agileits-top-heading">
+					<h2>Don't Stop, Keep Counting!</h2>
+				</div>
+				<!-- //w3-banner -->
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- contact -->
+	<div class="contact">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>Calorie Count</h3>
+			<div class="card" style="padding-top: 20px;">
+  <div class="container">
+   <div class="row">
+   	<div class="col-md-2">
+   		<h3 id="goal_cal" value="{{user_cal.goal_cal}}">{{user_cal.goal_cal}}</h3><br>
+   		GOAL
+   	</div>
+   	<div class="col-md-1">
+   		<h3>-</h3>
+   	</div>
+   		<div class="col-md-2">
+   		<h3 id="food_cal" value="{{user_cal.food_cal}}">{{user_cal.food_cal}}</h3><br>
+   		FOOD
+   	</div>
+   	<div class="col-md-1">
+   		<h3>+</h3>
+   	</div>
+   		<div class="col-md-2">
+   		<h3 id="exe_cal" value="{{user_cal.exe_cal}}">{{user_cal.exe_cal}}</h3><br>
+   		EXERCISE
+   	</div>
+   	<div class="col-md-1">
+   		<h3>=</h3>
+   	</div>
+    <div class="col-md-2">
+    <h3 id="rem_cal" value="{{user_cal.rem_cal}}">{{user_cal.rem_cal}}</h3><br>
+   		REMAINING
+   	</div>
+   	
+
+   </div>
+  </div>
+</div>
+			</div>
+			<div class="row" style="padding-top: 40px;">
+			<div class="col-md-6">
+			<select class="form-control" id="food_name">
+				<option>ADD FOOD</option>
+				{% for i in food %}
+				<option value="{{ i.calorie }}">{{ i.name }}</option>
+				{% endfor %}
+
+			</select>
+			</div>
+			<div class="col-md-6">
+			<select class="form-control" id="exe_name">
+				<option>ADD EXERCISE</option>
+				{% for i in exercise %}
+				<option value="{{ i.calorie }}">{{ i.name }}</option>
+				{% endfor %}
+			</select>
+			</div>
+			</div>
+
+			<div class="row" style="padding-top: 40px;">
+			<div class="col-md-6">
+			<select class="form-control" id="food_qty">
+				<option>Quantity</option>
+				<option>2</option>
+
+			</select>
+			</div>
+			<div class="col-md-6">
+			<select class="form-control" id="exe_qty">
+				<option>Quantity</option>
+				<option>2</option>
+
+			</select>
+			</div>
+			</div>
+
+			<div class="row" style="padding-top: 40px;">
+			<div class="col-md-6">
+			<button class="btn btn-primary" onclick="addfood()">Add Food</button>
+			</div>
+			<div class="col-md-6">
+			<button class="btn btn-primary" onclick="addexe()">Add Exercise</button>
+			</div>
+			</div>
+
+			<div class="row" style="padding-top: 40px;">
+			<div class="col-md-6 card">
+			    <table style="width: 80%;margin-left: 10%;">
+			    	 <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Calorie</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+           
+            <tbody id='food_list'>
+                
+            	{% for i in foodtr %}
+            		{{i}}
+            	{% endfor %}
+            </tbody>
+        </table>
+			</div>
+			<div class="col-md-6 card">
+			<table style="width: 80%;margin-left: 10%;">
+			    	 <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Calorie</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+           
+            <tbody id='exe_list'>
+                {% for i in exetr %}
+            		{{i}}
+            	{% endfor %}
+            </tbody>
+            	
+        </table>
+			</div>
+			</div>
+			
+
+			<div style="padding: 20px;">
+			<button class="btn btn-primary" style="margin-left: 45%" onclick="calorie_final()"> Add to Counter </button>
+		</div>
+
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 agile-footer-grid">
+					<h4>History of Us</h4>
+					<p>Started in the year 2017 by 3 engineering students to help this generation discuss and view blogs of well-known dietitians. <span>This webpage is our first and we look to have many more if we get a positive response!</span></p>
+				</div>
+				<div class="col-md-2 agile-footer-grid">
+					<h4>Events</h4>
+					<ul>
+						<li>12th Aug <a href="single.html">Diet Seminar</a></li>
+						<li>10th Sept <a href="single.html">Health check-up</a></li>
+						<li>24th Sept <a href="single.html">Warm-up session and 5km run</a></li>
+						<li>17th Oct <a href="single.html">Yoga Workshop</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 agile-footer-grid">
+					<h4>Navigation</h4>
+					<ul>
+						<li class="text"><a href="index.html">Home</a></li>
+						<li class="text"><a href="about.html">About</a></li>
+						<li class="text"><a href="gallery.html">Gallery</a></li>
+						<li class="text"><a href="contact.html">Calorie Counter</a></li>
+						<li class="text"><a href="icons.html">Discussion</a></li>
+						<li class="text"><a href="codes.html">Blogs</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container">
+			<p>© 2017 Bread To Shred. All rights reserved </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<script src="{% static 'js/lsb.js' %}"></script>
+	<script type="text/javascript">
+		function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        function sameOrigin(url) {
+            // test that a given url is a same-origin URL
+            // url could be relative or scheme relative or absolute
+            var host = document.location.host; // host + port
+            var protocol = document.location.protocol;
+            var sr_origin = '//' + host;
+            var origin = protocol + sr_origin;
+            // Allow absolute or scheme relative URLs to same origin
+            return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+            (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                // or any other URL that isn't scheme relative or absolute i.e relative.
+                !(/^(\/\/|http:|https:).*/.test(url));
+            }
+
+
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+                    // Send the token to same-origin, relative URLs only.
+                    // Send the token only if the method warrants CSRF protection
+                    // Using the CSRFToken value acquired earlier
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+        var food_cal = document.getElementById("food_cal");
+        var exe_cal = document.getElementById("exe_cal");
+        var rem_cal = document.getElementById("rem_cal");
+        var foodcal = parseInt(food_cal.innerHTML)  
+		var execal = parseInt(exe_cal.innerHTML)
+		var remcal = parseInt(rem_cal.innerHTML)
+		function addfood(){
+			console.log(document.getElementById('food_name'))
+			var e = document.getElementById('food_name')
+
+			var q = document.getElementById('food_qty')
+			var tbody = document.getElementById("food_list");
+			var food_cal = document.getElementById("food_cal");
+			var rem_cal = document.getElementById("rem_cal");
+			console.log(tbody)
+			console.log(food_cal.value)
+			  var tr = document.createElement("tr");
+			  var td1 = document.createElement("td");
+
+			  var td2 = document.createElement("td");
+
+			  var td3 = document.createElement("td");
+
+			  var td4 = document.createElement("td");
+
+			  var td5 = document.createElement("td");
+
+			  var button = document.createElement("button");
+
+			  button.appendChild(document.createTextNode("Delete"));
+			  button.className = "btn btn-danger";
+
+
+			  var val = e.options[e.selectedIndex].text;
+			  var cal = e.value
+			  var qty = q.options[q.selectedIndex].text;
+			  var tot = cal*qty
+			  console.log(typeof(tot))
+			  var f = parseInt(food_cal.innerHTML)  
+			  var r = parseInt(rem_cal.innerHTML)
+			  var fcal = f + tot
+			  var rcal = r - tot
+
+
+		/*	  foodcal.innerHTML = fcal;
+			  rem_cal.innerHTML = rcal;*/
+
+			  foodcal += tot;
+			  
+			 
+			  td1.appendChild(document.createTextNode(val));
+			  td2.appendChild(document.createTextNode(cal));
+			  td3.appendChild(document.createTextNode(qty));
+			  td4.appendChild(document.createTextNode(tot));
+			  td5.appendChild(button);
+
+			  tr.appendChild(td1);
+			  tr.appendChild(td2);
+			  tr.appendChild(td3);
+			  tr.appendChild(td4);
+			  tr.appendChild(td5);
+			  tbody.appendChild(tr);
+			  button.onclick = function() { tr.remove()
+
+			  var fo = parseInt(food_cal.innerHTML)
+			  var re = parseInt(rem_cal.innerHTML)
+			  /*food_cal.innerHTML = fo - tot;
+			  rem_cal.innerHTML = re + tot;*/
+			  foodcal -= tot;
+		
+			 
+			};
+			
+		}
+		function addexe(){
+			console.log(document.getElementById('exe_name'))
+			var e = document.getElementById('exe_name')
+
+			var temp='';
+
+			var q = document.getElementById('exe_qty')
+			var tbody = document.getElementById("exe_list");
+			var exe_cal = document.getElementById("exe_cal");
+			var rem_cal = document.getElementById("rem_cal");
+			console.log(tbody)
+			  var tr = document.createElement("tr");
+			  var td1 = document.createElement("td");
+
+			  var td2 = document.createElement("td");
+
+			  var td3 = document.createElement("td");
+
+			  var td4 = document.createElement("td");
+
+			  var td5 = document.createElement("td");
+
+			  var button = document.createElement("button");
+
+			  button.appendChild(document.createTextNode("Delete"));
+			  button.className = "btn btn-danger";
+
+
+			  var val = e.options[e.selectedIndex].text;
+			  var cal = e.value
+			  var qty = q.options[q.selectedIndex].text;
+			  var tot = cal*qty
+
+			  var e = parseInt(exe_cal.innerHTML) 
+			  var r = parseInt(rem_cal.innerHTML)
+			  var ecal = e + tot
+			  var rcal = r + tot
+/*
+			  exe_cal.innerHTML = ecal;
+			  rem_cal.innerHTML = rcal;*/
+			  execal += tot
+			
+			  
+			 
+			  td1.appendChild(document.createTextNode(val));
+			  td2.appendChild(document.createTextNode(cal));
+			  td3.appendChild(document.createTextNode(qty));
+			  td4.appendChild(document.createTextNode(tot));
+			  td5.appendChild(button);
+
+			  tr.appendChild(td1);
+			  tr.appendChild(td2);
+			  tr.appendChild(td3);
+			  tr.appendChild(td4);
+			  tr.appendChild(td5);
+			  tbody.appendChild(tr);
+
+			  console.log('hello',tr);
+				/*console.log('hi',temp);
+			  temp=temp+stringify(tr);*/
+			  
+
+			  button.onclick = function() { tr.remove()
+			  	var ex = parseInt(exe_cal.innerHTML)
+			  	var re = parseInt(rem_cal.innerHTML)
+			  	/*exe_cal.innerHTML = ex - tot
+			  	rem_cal.innerHTML = re - tot*/
+			  	execal -= tot
+			  	
+			   };
+			   
+			
+		}
+		function calorie_final(){
+			var food_cal = document.getElementById("food_cal");
+			var rem_cal = document.getElementById("rem_cal");
+			var goal_cal = document.getElementById("goal_cal");
+			var exe_cal = document.getElementById("exe_cal");
+			/*var fo = parseInt(food_cal.innerHTML)
+			var ex = parseInt(exe_cal.innerHTML)
+			var re = parseInt(rem_cal.innerHTML)*/
+			
+			var go = parseInt(goal_cal.innerHTML)
+			remcal = go - foodcal + execal
+			var json = { "goal" : go, "food" : foodcal, "exercise" : execal, "remaining" : remcal}
+			console.log('hiiiii',json)
+            $.ajax({
+                url: '/calorie/',
+                type: 'POST',
+                dataType: "json",
+                data: JSON.stringify(json),
+                success: function (data) {
+                    console.log('Shreyas hi');
+                    var food_cal = document.getElementById("food_cal");
+					var rem_cal = document.getElementById("rem_cal");
+					var exe_cal = document.getElementById("exe_cal");
+                   	food_cal.innerHTML = json.food
+                   	exe_cal.innerHTML = json.exercise
+			  		rem_cal.innerHTML = json.remaining
+                    } 
+                
+            });
+		}
+	</script>
+</body>	
+</html>

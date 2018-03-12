@@ -1,0 +1,300 @@
+	<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BreadToShred</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Global Food Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" media="all">
+<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- //font -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function() { 
+	$("#owl-demo").owlCarousel({
+ 
+		autoPlay: 3000, //Set AutoPlay to 3 seconds
+		autoPlay:true,
+		items : 3,
+		itemsDesktop : [640,5],
+		itemsDesktopSmall : [414,4]
+ 
+	});
+	
+}); 
+</script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="header">
+			<div class="container">
+				<div class="header-left">
+					<div class="w3layouts-logo">
+						<h1>
+							<a href="index.html">Bread To Shred</a>
+						</h1>
+					</div>
+				</div>
+				<div class="header-right">
+					<a href="/logout/"><p><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</p></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="top-nav">
+						<nav class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="/home/">Home</a></li>
+									<li><a class="active list-border" href="/about/">About</a></li>
+									<li><a href="/gallery/">Gallery</a></li>
+									<li><a href="/calorie/">Calorie Counter</a></li>
+									<li><a href="/blog/">Blog</a></li>
+								</ul>	
+								<div class="clearfix"></div>
+							</div>	
+						</nav>		
+				</div>
+				<!-- w3-banner -->
+				<div class="agileits-top-heading">
+					<h2>About</h2>
+				</div>
+				<!-- //w3-banner -->
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- about -->
+	<div class="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-5 wthree-about-left">
+					<div class="wthree-about-left-info">
+						<img src="{% static 'images/16.jpg' %}" alt="" />
+					</div>
+				</div>
+				<div class="col-md-7 agileits-about-right">
+					<h5>Physical fitness is not only one of the most important keys to a healthy body, it is the basis of dynamic and creative intellectual activity.</h5>
+					<p>Keeping the above statement in mind 'Bread to Shred' aims at pushing people to their limit, hence leading a healthy and fit life. 
+					<span>As discussed below the services offered are a calorie counter, a forum, blogs by various dietitians and health experts and a gallery which benefits all the users.</span>
+					</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- offers -->
+	<div class="jarallax offers">
+		<div class="container">
+			<div class="wthree-heading feedback-heading">
+				<h3>Our Services</h3>
+			</div>
+			<div class="offers-grids">
+				<div class="col-md-6 wthree-offers-left">
+					<div class="offers-left-grids">
+						<div class="offers-number">
+							<p>1</p>
+						</div>
+						<div class="offers-text">
+							<p>We offer a calorie counter as a function. One can set a goal and depending on the calories gained through food or calories burnt through exercise, the goal-setter can update his/her calorie count.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="offers-left-grids offers-left-middle">
+						<div class="offers-number">
+							<p>2</p>
+						</div>
+						<div class="offers-text">
+							<p>Blogs of various dietitians and health experts are also available to guide the users. These blogs are extremely helpful for all kinds of people.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="offers-left-grids">
+						<div class="offers-number">
+							<p>3</p>
+						</div>
+						<div class="offers-text">
+							<p>The gallery shares images of some good diet plans, food items as well as good exercises. Exercise and health related videos can also be found in the gallery.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- offers -->
+	<!-- team -->
+	<div class="team">
+		<div class="container">
+			<div class="wthree-heading">
+				<h3>The Creators</h3>
+			</div>
+			<div class="team-grids">
+				<!-- Bottom to top-->
+					<div class="col-sm-4 team-grid">
+						<!-- normal -->
+						<div class="ih-item circle effect10 bottom_to_top">
+							<div class="img"><img src="{% static 'images/shreyas.jpg' %}" alt="img"></div>
+							<div class="info">
+								<h3>Shreyas Jadhav</h3>
+								<div class="team-icons">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end normal -->
+					</div>
+					<div class="col-sm-4 team-grid">
+						<!-- normal -->
+						<div class="ih-item circle effect10 bottom_to_top">
+							<div class="img"><img src="{% static 'images/pranav.jpg' %}" alt="img"></div>
+							<div class="info">
+								<h3>Pranav Jain</h3>
+								<div class="team-icons">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end normal -->
+					</div>
+					<div class="col-sm-4 team-grid">
+						<!-- normal -->
+						<div class="ih-item circle effect10 bottom_to_top">
+							<div class="img"><img src="{%static 'images/krish.jpg' %}" alt="img"></div>
+							<div class="info">
+								<h3>Krish Engineer</h3>
+								<div class="team-icons">
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end normal -->
+					</div>
+					<div class="clearfix"> </div>
+				<!-- end Bottom to top-->
+			</div>
+		</div>
+	</div>
+	<!-- //team -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 agile-footer-grid">
+					<h4>History of Us</h4>
+					<p>Started in the year 2017 by 3 engineering students to help this generation discuss and view blogs of well-known dietitians. <span>This webpage is our first and we look to have many more if we get a positive response!</span></p>
+				</div>
+				<div class="col-md-2 agile-footer-grid">
+					<h4>Events</h4>
+					<ul>
+						<li>12th Aug <a href="single.html">Diet Seminar</a></li>
+						<li>10th Sept <a href="single.html">Health check-up</a></li>
+						<li>24th Sept <a href="single.html">Warm-up session and 5km run</a></li>
+						<li>17th Oct <a href="single.html">Yoga Workshop</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 agile-footer-grid">
+					<h4>Navigation</h4>
+					<ul>
+						<li class="text"><a href="index.html">Home</a></li>
+						<li class="text"><a href="about.html">About</a></li>
+						<li class="text"><a href="gallery.html">Gallery</a></li>
+						<li class="text"><a href="contact.html">Calorie Counter</a></li>
+						<li class="text"><a href="icons.html">Discussion</a></li>
+						<li class="text"><a href="codes.html">Blogs</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="agileits-w3layouts-copyright">
+		<div class="container">
+			<p>© 2017 Bread To Shred. All rights reserved </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<script src="{% static 'js/lsb.js' %}"></script>
+</body>	
+</html>
